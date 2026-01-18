@@ -1,0 +1,234 @@
+.success-page {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    padding-top: 80px;
+    /* Navbar height */
+    font-family: 'Outfit', sans-serif;
+}
+
+/* --- Hero Section --- */
+.page-hero {
+    position: relative;
+    padding: 6rem 0 4rem;
+    background: linear-gradient(180deg, #f0f9ff 0%, #f8fafc 100%);
+    overflow: hidden;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(0, 86, 179, 0.1);
+    color: var(--primary-blue);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(0, 86, 179, 0.2);
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.text-gradient {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+    font-size: 1.2rem;
+    color: #64748b;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.hero-background-shape {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 200%;
+    background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* --- Story Grid --- */
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 2.5rem;
+    padding-bottom: 4rem;
+}
+
+/* --- Story Card --- */
+.story-card {
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    border: 1px solid rgba(226, 232, 240, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.story-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.12);
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Visual Header & Image */
+.card-header-visual {
+    height: 140px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding: 1.5rem;
+}
+
+.patient-img,
+.patient-initials {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    bottom: -40px;
+    left: 1.5rem;
+    object-fit: cover;
+    background-color: white;
+    /* Fallback for transparent images */
+}
+
+.patient-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    background: #f1f5f9;
+}
+
+.story-category {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Card Body */
+.card-body {
+    padding: 3.5rem 2rem 2rem;
+    /* Top padding clears the overlapping image */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.patient-meta {
+    margin-bottom: 1.5rem;
+}
+
+.story-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    line-height: 1.3;
+}
+
+.patient-details {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.separator {
+    color: #cbd5e1;
+}
+
+.story-quote {
+    font-size: 1.05rem;
+    line-height: 1.6;
+    color: var(--secondary-blue);
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.story-quote::before {
+    content: '"';
+    color: rgba(59, 130, 246, 0.1);
+    /* Very subtle quote mark */
+    font-size: 4rem;
+    position: absolute;
+    top: -2rem;
+    left: -1rem;
+    font-family: serif;
+    z-index: -1;
+}
+
+.story-description {
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-top: auto;
+    /* Push to bottom if content varies */
+    border-top: 1px solid #f1f5f9;
+    padding-top: 1.5rem;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .page-hero {
+        padding: 4rem 0 3rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .card-header-visual {
+        height: 120px;
+    }
+}

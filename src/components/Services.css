@@ -1,0 +1,77 @@
+.services {
+    background-color: var(--soft-blue);
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--secondary-blue);
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem 0;
+    border-top: 1px solid var(--border-color);
+    transition: var(--transition);
+}
+
+.service-item:last-child {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.service-item:hover {
+    background-color: rgba(0, 86, 179, 0.03);
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.service-info h3 {
+    font-size: 1.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.5rem;
+}
+
+.service-info p {
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.btn-book {
+    background-color: var(--secondary-blue);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.btn-book:hover {
+    background-color: var(--primary-blue);
+    transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .service-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+    }
+
+    .service-info h3 {
+        font-size: 1.25rem;
+    }
+}

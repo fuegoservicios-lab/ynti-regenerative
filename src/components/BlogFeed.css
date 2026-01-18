@@ -1,0 +1,334 @@
+.blog {
+    background-color: #f8fafc;
+}
+
+.blog-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 2rem;
+}
+
+.header-content {
+    max-width: 600px;
+}
+
+.blog .section-title {
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(135deg, #0f172a 0%, #3b82f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.blog .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-hero, #0ea5e9);
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.6;
+}
+
+.slider-controls {
+    display: flex;
+    gap: 1rem;
+}
+
+.slider-btn {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--primary-blue);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.slider-btn:hover {
+    background: var(--primary-blue);
+    color: white;
+    transform: scale(1.1);
+}
+
+.blog-slider-container {
+    overflow: hidden;
+    margin: 0 -1.25rem;
+    padding: 1.25rem;
+}
+
+.blog-slider-track {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    gap: 2.5rem;
+    transform: translateX(calc(-1 * var(--current-index) * (33.333% + 0.833rem)));
+}
+
+.blog-slide {
+    flex: 0 0 calc(33.333% - 1.666rem);
+    min-width: 0;
+}
+
+.blog-card {
+    background-color: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.blog-img {
+    height: 240px;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.blog-card:hover .blog-img img {
+    transform: scale(1.05);
+}
+
+/* Like Button Styles */
+.like-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 0.8rem;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    color: #64748b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    min-width: 70px;
+}
+
+.like-btn:hover {
+    transform: translateY(-2px);
+    background: white;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.like-btn.liked {
+    color: #ef4444;
+    /* Red */
+    background: #fff0f0;
+}
+
+.like-btn.liked:hover {
+    transform: translateY(-2px);
+}
+
+.like-count {
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+}
+
+.like-btn svg {
+    transition: transform 0.2s;
+}
+
+.like-btn:active svg {
+    transform: scale(0.8);
+}
+
+/* Content */
+.blog-content {
+    padding: 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.blog-category {
+    color: var(--primary-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.blog-date {
+    font-size: 0.75rem;
+    color: #64748b;
+    font-weight: 500;
+}
+
+.blog-footer-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 1rem;
+    border-top: 1px solid #f1f5f9;
+    font-size: 0.75rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.blog-author {
+    font-weight: 600;
+    color: var(--primary-dark);
+}
+
+.blog-read-time {
+    font-style: italic;
+}
+
+.blog-content h3 {
+    font-size: 1.35rem;
+    color: #1e293b;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.blog-content p {
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.read-more {
+    font-weight: 600;
+    color: var(--primary-hero);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.read-more:hover {
+    gap: 0.8rem;
+    text-decoration: none;
+}
+
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    margin-top: 3rem;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #cbd5e1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: var(--primary-blue);
+    width: 25px;
+    border-radius: 10px;
+}
+
+@media (max-width: 1024px) {
+    .blog-slider-track {
+        transform: translateX(calc(-1 * var(--current-index) * (50% + 1.25rem)));
+    }
+
+    .blog-slide {
+        flex: 0 0 calc(50% - 1.25rem);
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-header {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .blog .section-title {
+        font-size: 2rem;
+    }
+
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    .slider-controls {
+        justify-content: center;
+        width: 100%;
+        gap: 1.5rem;
+    }
+
+    .blog-slider-track {
+        gap: 0;
+        transform: translateX(calc(-1 * var(--current-index) * 100%));
+    }
+
+    .blog-slide {
+        flex: 0 0 100%;
+        padding: 0 0.75rem;
+        /* Ensure cards have some breathing room from the sides */
+    }
+
+    .blog-slider-container {
+        padding: 1rem 0;
+        margin: 0 -0.75rem;
+    }
+}

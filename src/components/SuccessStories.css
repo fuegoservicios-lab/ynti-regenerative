@@ -1,0 +1,223 @@
+.success-section {
+    position: relative;
+    padding: 8rem 0;
+    overflow: hidden;
+    background-color: #f8f9fa;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+}
+
+/* Fluid Abstract Background - More Premium */
+/* Fluid Abstract Background - More Premium */
+.success-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    overflow: hidden;
+    background-image: url('/assets/success/background.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.6;
+    /* Slight transparency to blend with base color */
+}
+
+/* Shapes removed as image provides the aesthetic */
+.fluid-shape {
+    display: none;
+}
+
+.success-content {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.success-left {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.success-header {
+    margin-bottom: 1rem;
+}
+
+.success-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: var(--secondary-blue);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+    letter-spacing: -1px;
+}
+
+.success-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    background: white;
+    padding: 10px;
+    /* White border effect */
+    transform: rotate(-2deg);
+    /* Artistic tilt */
+    transition: transform 0.3s ease;
+}
+
+.video-container:hover {
+    transform: rotate(0deg) scale(1.02);
+}
+
+.video-placeholder {
+    width: 100%;
+    height: 350px;
+    background-color: #eee;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1000');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.play-button {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.play-button:hover {
+    transform: scale(1.1);
+    background: white;
+    color: var(--primary-blue);
+}
+
+.play-button svg {
+    width: 28px;
+    height: 28px;
+    fill: white;
+    stroke: white;
+    margin-left: 4px;
+    transition: all 0.3s ease;
+}
+
+.play-button:hover svg {
+    fill: var(--primary-blue);
+    stroke: var(--primary-blue);
+}
+
+.success-right {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.link-group {
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.link-group::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(to bottom, var(--primary-blue), rgba(0, 0, 0, 0));
+    border-radius: 2px;
+}
+
+.link-group h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--secondary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.link-group p {
+    font-size: 1rem;
+    color: var(--text-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.read-more-container {
+    margin-top: 1rem;
+}
+
+.btn-outline-dark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 2.5rem;
+    border: 2px solid var(--secondary-blue);
+    color: var(--secondary-blue);
+    font-weight: 700;
+    border-radius: 50px;
+    background: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-outline-dark:hover {
+    background: var(--secondary-blue);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 61, 130, 0.2);
+}
+
+@media (max-width: 900px) {
+    .success-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .success-left {
+        order: 1;
+        align-items: center;
+        text-align: center;
+    }
+
+    .success-right {
+        order: 2;
+    }
+
+    .video-container {
+        transform: rotate(0deg);
+        max-width: 100%;
+    }
+}
