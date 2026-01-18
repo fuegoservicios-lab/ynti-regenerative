@@ -125,13 +125,17 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(10, 15, 26, 0.98);
-        backdrop-filter: blur(20px);
+        background-color: #0f172a !important;
+        opacity: 1 !important;
+        backdrop-filter: none !important;
+        z-index: 10001;
         flex-direction: column;
         padding: 2rem 1.5rem;
         gap: 0.5rem;
         transform: translateX(-100%);
         transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        height: calc(100vh - 80px);
+        overflow-y: auto;
     }
 
     .nav-links.active {
