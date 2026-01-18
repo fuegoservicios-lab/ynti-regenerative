@@ -27,8 +27,8 @@ export const experienceData = [
         category: 'INMUNOLOGÍA AVANZADA',
         title: 'Fortalecimiento del Sistema Inmune',
         description: 'Protocolos integrales diseñados para modular y potenciar la respuesta inmunológica, abordando desde alergias hasta condiciones autoinmunes complejas con un enfoque personalizado.',
-        // Public domain immunology image from Unsplash/Wikimedia equivalents
-        image: 'https://images.unsplash.com/photo-1579154204601-01588f351e67?q=80&w=2070&auto=format&fit=crop',
+        // Local high-tech immunology illustration
+        image: '/images/details/immunology_detail.png',
         accent: '#be185d',
         details: {
             title: 'Potenciando su Escudo Natural',
@@ -51,8 +51,8 @@ export const experienceData = [
         category: 'TECNOLOGÍA GENÉTICA',
         title: 'Medicina de Precisión con CRISPR',
         description: 'A la vanguardia de la edición genética para corregir defectos a nivel molecular, abriendo posibilidades revolucionarias para la prevención y cura de trastornos hereditarios.',
-        // Public domain DNA/Genetics image
-        image: 'https://images.unsplash.com/photo-1530210124550-912dc1381cb8?q=80&w=2070&auto=format&fit=crop',
+        // Local high-tech CRISPR illustration
+        image: '/images/details/crispr_detail.png',
         accent: '#ca8a04',
         details: {
             title: 'El Futuro de la Salud está en sus Genes',
