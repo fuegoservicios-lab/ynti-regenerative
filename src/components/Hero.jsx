@@ -1,4 +1,4 @@
-import React from 'react';
+import { User, Users, Microscope, Dna, Syringe, Activity, Sparkles } from 'lucide-react';
 import './Hero.css';
 
 const Hero = () => {
@@ -14,10 +14,7 @@ const Hero = () => {
             <div className="container">
                 <div className="hero-grid">
                     <div className="hero-content">
-                        <div className="hero-badge">
-                            <span className="badge-icon">⚡</span>
-                            <span>Medicina Regenerativa Avanzada</span>
-                        </div>
+
 
                         <h1 className="hero-headline">
                             <span className="headline-small">El Envejecimiento</span>
@@ -40,9 +37,15 @@ const Hero = () => {
                             </a>
                             <div className="trust-indicator">
                                 <div className="trust-avatars">
-                                    <div className="avatar">👨‍⚕️</div>
-                                    <div className="avatar">👩‍🔬</div>
-                                    <div className="avatar">🧬</div>
+                                    <div className="avatar">
+                                        <User size={20} color="white" />
+                                    </div>
+                                    <div className="avatar">
+                                        <Users size={20} color="white" />
+                                    </div>
+                                    <div className="avatar">
+                                        <Activity size={20} color="white" />
+                                    </div>
                                 </div>
                                 <div className="trust-text">
                                     <span className="trust-number">+500</span>
@@ -53,15 +56,21 @@ const Hero = () => {
 
                         <div className="hero-tech-stack">
                             <div className="tech-item">
-                                <div className="tech-icon">🧬</div>
+                                <div className="tech-icon">
+                                    <Dna size={18} className="text-blue-400" />
+                                </div>
                                 <span>Células Madre</span>
                             </div>
                             <div className="tech-item">
-                                <div className="tech-icon">🔬</div>
+                                <div className="tech-icon">
+                                    <Microscope size={18} className="text-purple-400" />
+                                </div>
                                 <span>Terapia Génica</span>
                             </div>
                             <div className="tech-item">
-                                <div className="tech-icon">💉</div>
+                                <div className="tech-icon">
+                                    <Syringe size={18} className="text-teal-400" />
+                                </div>
                                 <span>Exosomas</span>
                             </div>
                         </div>
@@ -81,7 +90,9 @@ const Hero = () => {
                             </div>
 
                             <div className="floating-stat stat-2">
-                                <div className="stat-icon">✨</div>
+                                <div className="stat-icon">
+                                    <Sparkles size={24} className="text-yellow-400" fill="#facc15" />
+                                </div>
                                 <div className="stat-content">
                                     <span className="stat-value">100%</span>
                                     <span className="stat-label">Personalizado</span>
