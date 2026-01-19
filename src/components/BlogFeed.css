@@ -82,6 +82,10 @@
     overflow: hidden;
     margin: 0 -1.25rem;
     padding: 1.25rem;
+    position: relative;
+    z-index: 2;
+    min-height: 300px;
+    /* Ensure height mainly for debugging/empty state */
 }
 
 .blog-slider-track {

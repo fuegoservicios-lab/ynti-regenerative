@@ -147,6 +147,11 @@ const BlogFeed = () => {
                         style={{ '--current-index': currentIndex }}
                         onTransitionEnd={handleTransitionEnd}
                     >
+                        {extendedBlogs.length === 0 && (
+                            <div style={{ padding: '2rem', textAlign: 'center', width: '100%' }}>
+                                <p>No hay noticias disponibles en este momento.</p>
+                            </div>
+                        )}
                         {extendedBlogs.map((post, index) => {
                             // Use original ID for likes lookup, but use index for key to handle clones
                             const originalId = post.id;

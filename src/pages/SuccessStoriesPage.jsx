@@ -57,7 +57,7 @@ const successStoriesData = [
         category: "Cardiovascular",
         quote: "Volví a entrenar como cuando tenía 30. Mi resistencia es increíble.",
         description: "Un programa integral de optimización hormonal y salud cardiovascular permitió a Miguel recuperar su vitalidad física, reducir factores de riesgo y retomar su actividad deportiva con intensidad y seguridad.",
-        image: null, // Placeholder will differ based on design
+        image: "/assets/testimonials/miguel.png",
         gradient: "linear-gradient(135deg, #0f766e 0%, #2dd4bf 100%)"
     },
     {
@@ -68,7 +68,7 @@ const successStoriesData = [
         category: "Hormonas",
         quote: "He recuperado la calma y el sueño reparador. Me siento en paz conmigo misma.",
         description: "Abordamos los desequilibrios hormonales y el estrés oxidativo para restaurar su ciclo de sueño y estabilidad emocional, permitiéndole disfrutar de una vida plena y equilibrada.",
-        image: null,
+        image: "/assets/testimonials/lucia.png",
         gradient: "linear-gradient(135deg, #be185d 0%, #f472b6 100%)"
     },
     {
@@ -79,7 +79,7 @@ const successStoriesData = [
         category: "Longevidad",
         quote: "Juego ajedrez con mis nietos y les gano. Mi mente está más afilada que nunca.",
         description: "Un protocolo de longevidad enfocado en la neuroprotección y la salud celular ha permitido a Roberto mantener una agilidad mental excepcional y una independencia física envidiable.",
-        image: null,
+        image: "/assets/testimonials/roberto.png",
         gradient: "linear-gradient(135deg, #15803d 0%, #4ade80 100%)"
     }
 ];
